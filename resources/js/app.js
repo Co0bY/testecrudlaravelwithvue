@@ -4,28 +4,33 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 require('./bootstrap');
-import Vue from 'vue/dist/vue';
+import Vue from 'vue';
 window.Vue = Vue;
 import App from './App.vue';
 import VueAxios from 'vue-axios';
-import * as VueRouter from 'vue-router';
+import VueRouter from 'vue-router';
 import axios from 'axios';
-import { routes } from './routes';
+import routes from './routes';
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
-const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory,
-    routes
-});
+const Home = { template: '<div>Home</div>' }
+const About = { template: '<div>About</div>' }
+
+// 2. Define some routes
+// Each route should map to a component.
+// We'll talk about nested routes later.
+
+// 3. Create the router instance and pass the `routes` option
+// You can pass in additional options here, but let's
+// keep it simple for now.
 
 const app = new Vue({
-    el: '#app',
-    router: router,
+    router: routes,
     render: h => h(App),
-});
+}).$mount("#app");
