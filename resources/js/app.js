@@ -11,6 +11,8 @@ import VueAxios from 'vue-axios';
 import VueRouter from 'vue-router';
 import axios from 'axios';
 import routes from './routes';
+import VueTagsInput from "@johmun/vue-tags-input";
+Vue.use(VueTagsInput);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -19,8 +21,6 @@ import routes from './routes';
  */
 Vue.use(VueAxios, axios);
 
-const Home = { template: '<div>Home</div>' }
-const About = { template: '<div>About</div>' }
 
 // 2. Define some routes
 // Each route should map to a component.

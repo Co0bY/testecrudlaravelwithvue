@@ -5,6 +5,8 @@
                 <div class="navbar-nav">
                     <router-link to="/" class="nav-item nav-link">Products List</router-link>
                     <router-link to="/create" class="nav-item nav-link">Create Product</router-link>
+                    <router-link to="/allCategories" class="nav-item nav-link">Categories List</router-link>
+                    <router-link to="/createCategory" class="nav-item nav-link">Create Categorie</router-link>
                 </div>
             </div>
         </nav>
@@ -13,5 +15,12 @@
 </template>
  
 <script>
-    export default {}
+    import VueTagsInput from '@johmun/vue-tags-input'
+    export default {
+        components: {
+            VueTagsInput,
+         },
+    }
 </script>
+
+

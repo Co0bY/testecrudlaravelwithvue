@@ -24,7 +24,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@johmun/vue-tags-input": "^2.1.0",
         "vue-axios": "^3.4.1",
+        "vue-input-tag": "^2.0.7",
         "vue-router": "^3.5.4"
     }
 }
